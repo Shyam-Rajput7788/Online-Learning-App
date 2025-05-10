@@ -1,0 +1,49 @@
+{% extends "parent.html" %}
+{% block body%}
+  
+  <form class="form-group" action="{% url 'nouapp:contactus' %}" method="POST" style="width: 80%; background:transparent; border-radius: 10px; margin:50px auto; padding: 15px; box-shadow: 3px 3px 15px black;">
+  {% csrf_token %}
+            <h1 style="text-align: center; color: #39ac73; margin-top: 15px;">Enquiry Form</h1>
+            {% if messages %}
+               {% for messages in messages %}
+                  <div class="alert alert-info alert-dismissible fade show" role="alert">
+                   <p>{{messages}}</p>
+                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                 </div>
+
+               {% endfor %}
+
+            {% endif %}
+              
+    
+                 <label class="form-label mt-2">Enter Name</label> 
+             
+                 <input type="text" name="name" class="form-control " placeholder="Enter Name" style="background: transparent;"/>
+           
+                 <label class="form-label mt-2">Select Gender </label>
+            
+                 <input type="radio" name="gender" value="Male" class="form-check-input mt-2" style="margin-left: 15px; background: transparent;"/>&nbsp;Male
+                 <input type="radio" name="gender" value="Female" class="form-check-input mt-2" style="background:transparent;"/>&nbsp;Female<br/>
+            
+        
+                 <label class="form-label mt-2">Enter Address</label>
+            
+                 <textarea name="address" class="form-control" placeholder="Enter Address" style="background: transparent;"></textarea>
+             
+                 <label class="form-label mt-2">Contact No</label>
+        
+        
+                 <input type="number" name="contactno" class="form-control" placeholder="Contact No" style="background:transparent;"/>
+       
+                 <label class="form-label mt-2">Enter Email Address</label>
+        
+                 <input type="text" name="emailaddress" class="form-control" placeholder="Enter Email Address" style="background: transparent;"/>
+        
+                 <label class="form-label mt-2">Enter Enquiry Text</label>
+        
+            <textarea name="enquirytext" class="form-control" placeholder="Enter Enquiry Text" style="background: transparent;"></textarea>
+        
+        <td><button type="submit" class="btn  mb-2 mt-3" style="width: 50%; margin-left: 25%; color: white; background-color: #39ac73;">submit</button>
+    
+  </form>
+{% endblock %}

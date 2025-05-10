@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nouapp</title>
+  <link rel="stylesheet" href="static\css\bootstrap.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container container-fluid ">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow  mb-5">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'images/'%}" alt="1" height="30" width="30"
+            class="d-inline-block align-text-top bg-primary"> 🅾️&nbsp; Online Platform
+        </a>
+        {% comment %} <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> {% endcomment %}
+
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            
+            {% comment %} <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'nouapp:index'%}">Home</a>
+            </li> {% endcomment %}
+
+             <!-- <li class="nav-item">
+              <a class="nav-link" href="{% url 'nouapp:aboutus'%}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'nouapp:registration'%}">Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'nouapp:login'%}">Login</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Enquiry</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'nouapp:contactus'%}">Contact Us</a>
+            </li> -->
+
+          </ul>
+          {% comment %} <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> {% endcomment %}
+          
+        </div >
+
+        <button class="btn btn-secondary me-5" type="button">
+          <a class="nav-link active" aria-current="page" href="{% url 'nouapp:index'%}">Home</a>
+        </button>
+
+        <div class="dropdown me-5">
+          <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Explore
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+          <button class="btn btn-light me-3" type="button">
+            <a class="nav-link" href="{% url 'nouapp:login'%}">Login</a>
+          </button>
+          <button class="btn btn-info me-3" type="button">
+            <a class="nav-link" href="{% url 'nouapp:registration'%}">Signup</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  
+  <div class="row mt-5 pt-2  ">
+         <div class="col-sm-6 pt-5  shadow  mb-5 bg-info" style="background-color: aliceblue; min-height: 400px; "> 
+         <p class="px-5 h1">
+          Learn today's most-demand
+          skills with our free online
+          courses
+          </p>
+      <div class="px-5 mt-5 gap-2 ">
+        <button class="btn btn-primary me-3 px-5 mb-1" type="button">Explore Free courses</button>
+        <button class="btn btn-outline-secondary px-4 " type="button">Get Recommendation</button>
+      </div>
+      </div>
+    <div class="col-sm-6 shadow  mb-5" style="background-color: aliceblue; min-height: 400px;">
+      <img src="{% static 'images/online.png' %}" class="card-img-top" alt="...">
+         
+    </div>
+    </div>
+
+
+
+
+  <!--<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active ">
+        <img src="{% static 'images/s11.jpg' %}" class="d-block w-100 " alt="1">
+        </div>     
+      <div class="carousel-item">
+        <img src="{% static 'images/s22.jpg' %}" class="d-block w-100" alt="1">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/s33.jpg' %}" class="d-block w-100" alt="1">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>-->
+
+  <div class="row mt-2 p-2" >
+    <div class="col-sm-12 py-1 px-4"style="background-color:aliceblue; min-height:400px">
+      <h2 style="text-align:center;">Employees from leading companies worldwide have enrolled with us</h2>
+
+    </div>
+  </div>
+
+  <!--marquee start-->
+  {% comment %} <div class="container-fluid" style="height: 64px; background-color:rgb(197, 226, 251);">
+    <marquee behavior="alternate" direction="" onmousemove="this.stop()"
+      onmouseout="this.start()">
+      <div style="float:left;">
+        <p class="mt-2" style="width:25%;text-align: center;background-color:rgb(197, 226, 251);">
+          The portal is accesss to userfriendly</p>
+      </div>
+      <div style="float: right;">
+        <p class="mt-2" style="width:25%;text-align: center;background-color:rgb(197, 226, 251);">
+          The portal is accesssto userfriendly</p>
+      </div>
+      <!-- <div style="float: right; background-color: red;">
+        <p class="mt-2" style="width:25%;">The portal is accesss to userfriendly</p>
+      </div> -->
+    </marquee>
+  </div> {% endcomment %}
+
+
+  <div class="  col-sm-11 container-fluid text-bg-info  shadow-lg p-3 mb-5 mt-5 rounded" style="height: 120px; ">
+  
+    <p class="  h3" style="text-align:center;">Let’s find the right course for you!</P>
+    <div class="  col-3 mx-auto">
+      <button class="btn btn-light" type="button">Get Recommendations</button>
+    </div>
+  </div>
+
+
+<div class="container">
+  <h3>Explore our free courses in partnership with</h3>
+  <button class="btn btn-outline-info" type="button">All partners</button>
+  <button class="btn btn-outline-secondary" type="button">AWS</button>
+  <button class="btn btn-outline-secondary" type="button">Google cloud</button>
+  <div class="row row-cols-1 row-cols-md-4 g-1 py-5 ">
+      <div class=" col "  style="">
+          <div class="card shadow  rounded" style="">
+          <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+          <h5 class="card-title">Cloud computing</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-info ">Start leaning</a>
+          </div>
+      </div>
+    </div>
+
+<div class="ml-1">
+    <div class="card  shadow  rounded" style="">
+      <img src="{% static 'images/ml.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Machine learning</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-info">Start learning</a>
+      </div>
+    </div>
+  </div>
+
+    <div class="card shadow  rounded" style="">
+      <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cloud computing</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-info">Start learning</a>
+      </div>
+    </div>
+    <div class="card shadow  rounded" style="">
+      <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cloud computing</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-info">Start learning</a>
+      </div>
+    </div>
+
+    <div class="card shadow  rounded" style="">
+      <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cloud computing</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-info">Start learning</a>
+      </div>
+    </div>
+
+    <div class="card shadow  rounded" style="">
+      <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cloud computing</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-info">Start learning</a>
+      </div>
+    </div>
+
+    <div class="card shadow  rounded" style="">
+      <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cloud computing</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-info">Start learning</a>
+      </div>
+    </div>
+
+  <div class="">
+    <div class="card shadow  rounded" style="">
+      <img src="{% static 'images/ml.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Machine learinig</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-info ">Start learning</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+   
+
+<div class="px-5 mb-5 display-6 "><p >Explore Free Online Courses</p></div>
+
+  <div class="row  px-5 " >
+    
+    <div class="col-sm-4 " style="background-color:rgb(197, 226, 251);min-height:500px;">
+      <div class="mt-2 h4 ">
+        <p>Category</p>
+         </div>
+      
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary" type="button">Introduction to data analytics course</button>
+          <button class="btn btn-light " type="button">Introduction to data analytics course</button>
+          <button class="btn btn-light " type="button">Introduction to data analytics course</button>
+          <button class="btn btn-light " type="button">Introduction to cloud computing course</button>
+          <button class="btn btn-light " type="button">Introduction to artificial intelligence</button>
+          <button class="btn btn-light " type="button">Introduction to ms excel</button>
+          <button class="btn btn-light " type="button">Button</button>
+
+        </div>
+          
+    </div>
+
+    
+    <div class="col-sm-8 py-3" style="background-color: aliceblue; min-height: 500px;" >
+      
+      <div class="container" style="height:500px;border:0px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+        <h3>Courses in Data science & bussiness analytics</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-1 py-3  " >
+            <div class=" col "  >
+                <div class="card shadow  rounded" style="">
+                <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Cloud computing</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-info ">Start leaning</a>
+                </div>
+            </div>
+          </div>
+      
+      <div class="ml-1">
+          <div class="card  shadow  rounded" style="">
+            <img src="{% static 'images/ml.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Machine learning</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-info">Start learning</a>
+            </div>
+          </div>
+        </div>
+      
+          <div class="card shadow  rounded" style="">
+            <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cloud computing</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-info">Start learning</a>
+            </div>
+          </div>
+
+          <div class="card shadow  rounded" style="">
+            <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cloud computing</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-info">Start learning</a>
+            </div>
+          </div>
+
+          <div class="card shadow  rounded" style="">
+            <img src="{% static 'images/cloud.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cloud computing</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-info">Start learning</a>
+            </div>
+          </div>
+      
+        <div class="">
+          <div class="card shadow  rounded" style="">
+            <img src="{% static 'images/ml.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Machine learinig</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-info ">Start learning</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+      {%  block body %}
+      
+      {% endblock %} 
+    </div>
+  </div>
+
+  <!--live webinar -->
+  <div class="row mt-2 p-2" >
+     <div class="col-sm-12 py-4 px-4"style="background-color:aliceblue; min-height:400px">
+      <h2>Upcoming Live Webinars</h2>
+
+    </div>
+  </div>
+  
+
+   <!--Learners Reviews -->
+     <div class="row mt-2 p-2" >
+        <div class="col-sm-12 py-4 px-4"style="background-color:aliceblue; min-height:400px">
+          <h2>Learners Reviews</h2>
+
+        </div>
+      </div>
+  
+
+  <!-- footer  start -->
+  <div class="row mt-1 shadow  mb-2" >
+
+    <!-- footer left start -->
+    <div class="col-sm-3  px-5 shadow  mb-1 bg-dark-subtle" style="background-color:rgb(197, 226, 251);text-align:center">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 mt-2"><img src="" alt="1" height="100" width="100"></div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+        <p class="col-sm-1"></p>
+        <p class="col-sm-10 mt-2"style="">
+          Nalanda Open University is a State Open University duly established under the Act of Bihar
+          Government and is also recognized by Distance Education Council, IGNOU, Maidan Garhi, New Delhi.
+        </p>
+        <p class="col-sm-1"></p>
+        <div class="row">
+          <div class="col-sm-1"> </div>
+          <div class="col-sm-10">
+            <ul class="d-flex " style="list-style:none;">
+              <li class="col-sm-2"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+              <li class="col-sm-2"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+              <li class="col-sm-2"><a href="#"><i class="fa-brands fa-google"></i></a></li>
+              <li class="col-sm-2"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li class="col-sm-2"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+      </div>
+    </div>
+    <!-- footer left end -->
+
+    <!-- footer middle start -->
+    <div class="col-sm-3 px-5 shadow  mb-1 bg-dark-subtle" style="min-height: 300px;background-color:rgb(197, 226, 251);">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 mt-2 ">
+          <h3>UseFul Links</h3>
+
+          <ul style="list-style: none; text-decoration: none;">
+            <li><a href="#" style="text-decoration: none;">Home</a></li>
+            <li><a href="#" style="text-decoration: none;">About Us</a></li>
+            <li><a href="#" style="text-decoration: none;">Registration</a></li>
+            <li><a href="#" style="text-decoration: none;">Login</a></li>
+            <li><a href="#" style="text-decoration: none;">Enquiry</a></li>
+            <li><a href="#" style="text-decoration: none;">ontact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+    <!-- footer middle end -->
+
+    <!-- footer right start -->
+    <div class="col-sm-3 px-5  shadow  mb-1 bg-dark-subtle" style="min-height: 300px;background-color:rgb(197, 226, 251);">
+      <div class="row mt-2">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+          <h3>Contact Info </h3>
+
+          <a href="#" style="text-decoration: none;">map</a>
+          <p>2nd/3rd Floor, Biscomaun Bhawan, Gandhi Maidan, Patna 800 001 (BIHAR).</p>
+          <p>91+ 7355778847</p>
+          <p>Give us a call</p>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+
+      
+    </div>
+
+    <div class="col-sm-3 px-5 shadow  mb-1 bg-dark-subtle" style="min-height: 300px;background-color:rgb(197, 226, 251);">
+      <div class="row mt-2">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+          <h3>Contact Info </h3>
+
+          <a href="#" style="text-decoration: none;">map</a>
+          <p>2nd/3rd Floor, Biscomaun Bhawan, Gandhi Maidan, Patna 800 001 (BIHAR).</p>
+          <p>91+ 7355778847</p>
+          <p>Give us a call</p>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    <!-- footer right end -->   
+  </div>
+
+  
+   <!--copy right -->
+   <div class="row bg-dark"style="min-height:200px; ">
+    <div class="" >
+      <p class="fw-light"style="color:white; text-align:center;">Light weight text.&#169;
+        2019-2024</p>
+       
+    </div>
+   </div>
+
+
+    <!-- foote right end -->
+   
+  <script src="https://kit.fontawesome.com/b979f40bf1.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="static/js/bootstrap.bundle.js" rel="javascript"></script>
+</body>
+
+</html>
