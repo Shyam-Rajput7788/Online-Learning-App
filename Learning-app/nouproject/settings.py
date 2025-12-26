@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'nouproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'noudb1',
+        'NAME': 'db.sqlite3',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
@@ -147,4 +147,4 @@ EMAIL_HOST='smtp.gmail.com'
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER='shyammohan.rdl@gmail.com' # sender's email-id
-EMAIL_HOST_PASSWORD='nfsectttrmkfxelx' #password associated 
+EMAIL_HOST_PASSWORD='wfxy gghf xkkn akap' #password associated 

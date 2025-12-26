@@ -21,9 +21,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include(('nouapp.nouappurls','nouapp'),namespace='nouapp')),
-    path('studentapp/',include(('studentapp.studentappurls','studentapp'),namespace='studentapp')),
-    path('adminapp/',include(('adminapp.adminappurls','adminapp'),namespace='adminapp')),
+    path('',include(('nouapp.urls','nouapp'),namespace='nouapp')),
+    path('studentapp/',include(('studentapp.urls','studentapp'),namespace='studentapp')),
+    path('adminapp/',include(('adminapp.urls','adminapp'),namespace='adminapp')),
     path('captcha/',include('captcha.urls')),
     
 ]
